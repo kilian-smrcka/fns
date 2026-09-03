@@ -1,0 +1,24 @@
+{
+  "_comment": "Hot-tier wires. Add any RSS/Atom URL (newswire per-company feeds, company IR press-release feeds). fnsd polls each every --hot-secs seconds. FINNHUB_KEY env (free, 60 req/min) adds Finnhub company-news as a hot source with no config needed here.",
+  "rss": [
+    { "name": "sec-atom-AAPL-8K", "tickers": ["AAPL"], "sec": true, "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000320193&type=8-K&count=5&output=atom" },
+    { "name": "prnewswire-firehose", "url": "https://www.prnewswire.com/rss/news-releases-list.rss" },
+    { "name": "nasdaq-press", "url": "https://www.nasdaq.com/feed/rssoutbound?category=US%20Press%20Releases" },
+    { "name": "nasdaq-stocks", "url": "https://www.nasdaq.com/feed/rssoutbound?category=Stocks" }
+  ],
+  "_rss_example": [
+    { "name": "example-ir-feed", "url": "https://example.com/press-releases/rss.xml" }
+  ],
+  "aliases": {
+    "APPLE INC": "AAPL",
+    "MICROSOFT CORPORATION": "MSFT",
+    "NVIDIA CORPORATION": "NVDA",
+    "AMAZON.COM, INC.": "AMZN",
+    "META PLATFORMS, INC.": "META",
+    "ALPHABET INC": "GOOGL",
+    "TESLA, INC.": "TSLA",
+    "ADVANCED MICRO DEVICES, INC.": "AMD",
+    "JPMORGAN CHASE & CO.": "JPM",
+    "EXXON MOBIL CORPORATION": "XOM"
+  }
+}
